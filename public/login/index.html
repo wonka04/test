@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <!-- Agrega la siguiente línea para incluir Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center mb-4">Iniciar Sesión</h1>
+        <form method="post" id="acceder-form">
+          <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input type="text" class="form-control" id="usuario" name="user" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" class="form-control" id="contrasena" name="pass" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+        </form>
+        <div id="mensajeUsuarioRegistrado" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agrega la siguiente línea para incluir Bootstrap JS (opcional) -->
+  
+  <script src="./login.js"></script>
+</body>
+</html>

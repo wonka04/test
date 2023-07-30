@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Formulario con Bootstrap</title>
+  <!-- Enlace a los archivos CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Formulario de contacto</h2>
+  <form id="login-form" action="https://educativo-d47477f32021.herokuapp.com/auth/login" method="POST"  >
+   
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" name="userId" class="form-control" id="email"name" placeholder="Ingresa tu correo electrónico">
+    </div>
+    <div class="form-group">
+        <label for="nombre">passwor:</label>
+        <input type="text" name="password" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+      </div>
+   
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+
+<!-- Enlace a los archivos JavaScript de Bootstrap (JQuery es requerido) -->
+
+<script src="./index.js"></script>
+
+</body>
+</html>

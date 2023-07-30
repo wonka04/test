@@ -1,0 +1,43 @@
+//const botoncorreo = document.querySelector('#correo_container');
+const miBoton = document.getElementById('data');
+
+
+const url = ( window.location.hostname.includes('localhost') )
+            ? 'http://localhost:8080/download/'
+            : 'https://chas.vercel.app/download/';
+
+
+
+miBoton.addEventListener('click', ev => {
+    console.log("Boton precionado")
+    const requestOptions = {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'Access-Control-Allow-Origin':'*',
+          'Content-Type': 'application/json' // Especificamos que estamos enviando datos en formato JSON
+        },
+        //body: JSON.stringify(formData) // Convertimos el objeto a una cadena JSON para enviarlo en el cuerpo
+      };
+
+    
+
+    
+
+      fetch( url + 'data' , requestOptions)
+      .then( resp => resp.json() )
+      .then( (data) => {
+
+       if(!data.ok){
+        alert(data.msg);
+        return location.reload(true);
+        
+       }     
+
+        
+      })      
+      .catch( err => {
+          console.log(err)
+      })
+    
+});
